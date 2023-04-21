@@ -33,8 +33,11 @@
           <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
         </linkableFacilities>
       </li>
-      <li Class="PipeSystem.CompProperties_Resource">
+      <li MayRequire="VanillaExpanded.VNutrientE" Class="PipeSystem.CompProperties_Resource">
         <pipeNet>VNPE_NutrientPasteNet</pipeNet>
+      </li>
+      <li MayRequire="vanillaracesexpanded.sanguophage" Class="PipeSystem.CompProperties_Resource">
+        <pipeNet>VRE_HemogenNet</pipeNet>
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Power">

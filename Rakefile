@@ -10,7 +10,7 @@ task :clean do
     File.unlink(fname) unless File.basename(fname) == my_name
   end
   puts
-  system "find . -type f", exception: true
+  system "find . -type f -not -path './.git/*'", exception: true
   puts
   system "du -sh .", exception: true
 end

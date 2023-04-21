@@ -25,10 +25,12 @@ namespace zed_0xff.VNPE
                     }
                 }
 
-                // Unlink dripper from ConnectedBed
-                var dripper = DefDatabase<ThingDef>.GetNamed("VNPE_NutrientPasteDripper");
-                if( connected_props.linkableFacilities.Contains(dripper) ){
-                    connected_props.linkableFacilities.Remove(dripper);
+                if (ModLister.HasActiveModWithName("Vanilla Nutrient Paste Expanded")) {
+                    // Unlink dripper from ConnectedBed
+                    var dripper = DefDatabase<ThingDef>.GetNamed("VNPE_NutrientPasteDripper");
+                    if( connected_props.linkableFacilities.Contains(dripper) ){
+                        connected_props.linkableFacilities.Remove(dripper);
+                    }
                 }
 
             }
