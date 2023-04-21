@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Vanilla Nutrient Paste Expanded: Connected Bed</name>
+  <author>zed_0xff</author>
+  <packageId>zed.0xff.VNPE.ConnectedBed</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <description>Adds new hospital bed with integrated nutrient paste dripper.
+
+Saves space, power and a bit of CPU cycles :)
+
+ - fully mimics vanilla Hospital Bed
+ - requires research of Hospital Beds and Nutrient Paste (both vanilla)
+ - stuffable
+ - costs 110 metallic + 6 components
+ - requires construction skill 10 to build
+ - consumes 25 power (VNPE external dripper needs 50)
+ - runs less code than original VNPE dripper
+ - safe to add/remove mid-game
+
+Sorry, no custom textures here (I've got trotter hands), just slightly greenish handles, like most VNPE things.
+
+[url=https://ko-fi.com/K3K81Z3W5][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+</description>
+  <modDependencies>
+    <li>
+      <packageId>VanillaExpanded.VNutrientE</packageId>
+      <displayName>Vanilla Nutrient Paste Expanded</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>VanillaExpanded.VNutrientE</li>
+    <li>VanillaExpanded.VFEMedical</li>
+  </loadAfter>
+</ModMetaData>
