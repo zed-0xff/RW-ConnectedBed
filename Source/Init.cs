@@ -13,18 +13,6 @@ namespace zed_0xff.VNPE
                 return;
 
             if( connected_bed.GetCompProperties<CompProperties_AffectedByFacilities>() is CompProperties_AffectedByFacilities connected_props ){
-                var hospital_bed = DefDatabase<ThingDef>.GetNamed("HospitalBed");
-                if( hospital_bed != null
-                        && hospital_bed.GetCompProperties<CompProperties_AffectedByFacilities>() is CompProperties_AffectedByFacilities hospital_props
-                  ) {
-                    // copy all linkables from hospital bed
-                    foreach( ThingDef x in hospital_props.linkableFacilities ){
-                        if ( !connected_props.linkableFacilities.Contains(x) ){
-                            connected_props.linkableFacilities.Add(x);
-                        }
-                    }
-                }
-
                 if (ModLister.HasActiveModWithName("Vanilla Nutrient Paste Expanded")) {
                     // Unlink dripper from ConnectedBed
                     var dripper = DefDatabase<ThingDef>.GetNamed("VNPE_NutrientPasteDripper");
