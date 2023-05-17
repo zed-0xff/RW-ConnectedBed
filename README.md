@@ -7,7 +7,7 @@ Adds new hospital bed with 3 cool features:
 2. automatic blood draining from prisoners (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
 3. automatic blood transfusion for everyone (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
 
-You can use it with both [Vanilla Races Expanded - Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763] and [Vanilla Nutrient Paste Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383) simultaneously or with just one of them.
+You can use it with both [Vanilla Races Expanded - Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763) and [Vanilla Nutrient Paste Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383) simultaneously or with just one of them.
 
 - fully mimics vanilla Hospital Bed
 - requires research of Hospital Beds and Nutrient Paste (both vanilla)
