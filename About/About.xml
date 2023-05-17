@@ -3,6 +3,7 @@
   <name>Connected Bed</name>
   <author>zed_0xff</author>
   <packageId>zed.0xff.VNPE.ConnectedBed</packageId>
+  <url>https://github.com/zed-0xff/RW-ConnectedBed</url>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
