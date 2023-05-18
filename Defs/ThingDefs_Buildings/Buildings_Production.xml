@@ -27,6 +27,9 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>25</basePowerConsumption>
       </li>
+      <li Class="DubsBadHygiene.CompProperties_Pipe" MayRequire="Dubwise.DubsBadHygiene">
+        <mode>Sewage</mode>
+      </li>
     </comps>
     <costStuffCount>110</costStuffCount>
     <costList>

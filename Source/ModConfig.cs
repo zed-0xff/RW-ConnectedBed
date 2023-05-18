@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 using Verse;
 using UnityEngine;
 
@@ -55,9 +57,28 @@ public class ModConfig : Mod
 {
     public static ConnectedBedSettings Settings { get; private set; }
 
-    public ModConfig(ModContentPack content) : base(content)
-    {
+    public static List<Assembly> plugins = new List<Assembly>();
+
+    public ModConfig(ModContentPack content) : base(content) {
         Settings = GetSettings<ConnectedBedSettings>();
+
+        plugins.Clear();
+        if (ModLister.HasActiveModWithName("Dubs Bad Hygiene")) {
+            LoadPlugin(content, "DBH");
+        }
+    }
+
+    private void LoadPlugin(ModContentPack content, string name){
+        try {
+            string fname = Path.Combine(content.RootDir, "Plugins", "CB_" + name + ".dll");
+            byte[] rawAssembly = File.ReadAllBytes(fname);
+            Assembly assembly = AppDomain.CurrentDomain.Load(rawAssembly);
+            Log.Message("[d] ConnectedBed loaded plugin " + assembly);
+            content.assemblies.loadedAssemblies.Add(assembly);
+            plugins.Add(assembly);
+        } catch(Exception ex) {
+            Log.Error("[!] ConnectedBed: plugin " + name + " failed to load: " + ex);
+        }
     }
 
     private void drawBlock(Listing_Standard l, string title, ref ConnectedBedSettings.GeneralSettings s){

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using PipeSystem;
 using RimWorld;
@@ -18,6 +19,8 @@ public class Building_ConnectedBed : Building_Bed {
 
     public override Color DrawColor => new Color32(127, 138, 108, 255);
 
+    private IPlugin dbh = null;
+
     public override void SpawnSetup(Map map, bool respawningAfterLoad) {
         base.SpawnSetup(map, respawningAfterLoad);
         powerComp = GetComp<CompPowerTrader>();
@@ -28,6 +31,13 @@ public class Building_ConnectedBed : Building_Bed {
             }
             if (comp?.Props?.pipeNet?.defName == "VNPE_NutrientPasteNet") {
                 pasteComp = comp;
+            }
+        }
+
+        if (ModLister.HasActiveModWithName("Dubs Bad Hygiene")) {
+            Type t = GenTypes.GetTypeInAnyAssembly("zed_0xff.VNPE.Plugin_DBH");
+            if( t != null ){
+                dbh = (IPlugin)Activator.CreateInstance(t, new object[] { this });
             }
         }
     }
@@ -184,6 +194,14 @@ public class Building_ConnectedBed : Building_Bed {
         if( hemogenComp != null){
             TransfuseBlood();
             DrawBlood();
+        }
+
+        if( dbh != null ){
+            foreach( Thing t in CurOccupants ){
+                if( t is Pawn pawn ){
+                    dbh.ProcessPawn(pawn);
+                }
+            }
         }
 
         base.TickRare();
