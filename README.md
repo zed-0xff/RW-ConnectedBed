@@ -1,11 +1,12 @@
 # Connected Bed
 [![Connected Bed](About/Preview.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2957904090)
 
-Adds new hospital bed with 3 cool features:
+Adds new hospital bed with 4 cool features:
 
-1. integrated nutrient paste dripper (requires [VNPE](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763))
-2. automatic blood draining from prisoners (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
-3. automatic blood transfusion for everyone (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
+1. Integrated nutrient paste dripper (requires [VNPE](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763))
+2. Automatic blood draining from prisoners (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
+3. Automatic blood transfusion for everyone (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
+4. Optional connection to [DBH](https://steamcommunity.com/sharedfiles/filedetails/?id=836308268) for water and bladder needs
 
 You can use it with both [Vanilla Races Expanded - Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763) and [Vanilla Nutrient Paste Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383) simultaneously or with just one of them.
 
