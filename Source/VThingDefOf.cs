@@ -1,13 +1,12 @@
 using RimWorld;
 using Verse;
 
-namespace zed_0xff.VNPE
-{
-    [DefOf]
-    public static class VThingDefOf
-    {
-        public static ThingDef VNPE_ConnectedBed;
+namespace zed_0xff.VNPE;
 
-        static VThingDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(VThingDefOf));
-    }
+[DefOf]
+public static class VThingDefOf {
+    public static ThingDef VNPE_ConnectedBed;
+
+    static VThingDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(VThingDefOf));
 }
+
