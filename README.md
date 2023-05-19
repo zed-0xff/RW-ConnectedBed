@@ -25,7 +25,7 @@ Still no custom textures here (I've got trotter hands), just slightly greenish h
 
 [![CPS: Compact Pawn Storage](https://steamuserimages-a.akamaihd.net/ugc/2031730758744755960/6EBD5542F16F51143F66B0123588C3CD002945A4/?imw=268&imh=151&ima=fit&impolicy=Letterbox)](https://steamcommunity.com/sharedfiles/filedetails/?id=2974541112)
 [![Loft Bed](https://steamuserimages-a.akamaihd.net/ugc/2030602392616950419/CAF6F6AB4C5D99E729AD70C683C0D78169B028BF/?imw=268&imh=151&ima=fit&impolicy=Letterbox)](https://steamcommunity.com/sharedfiles/filedetails/?id=2961708299)
-[![YADA](https://steamuserimages-a.akamaihd.net/ugc/2031730032116745972/3AFF012AAA9C0F768199C85E3BD48533D177D40E/?imw=268&imh=151&ima=fit&impolicy=Letterbox)](https://steamcommunity.com/sharedfiles/filedetails/?id=2971543841)
+[![YADA](https://steamuserimages-a.akamaihd.net/ugc/2031731300519719867/4E551B5E8A5F51182BD2D8830C7E9E180D0634BC/?imw=268&imh=151&ima=fit&impolicy=Letterbox)](https://steamcommunity.com/sharedfiles/filedetails/?id=2971543841)
 https://github.com/zed-0xff/RW-ConnectedBed
 
 ## Support me
