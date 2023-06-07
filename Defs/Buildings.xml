@@ -134,6 +134,7 @@
     <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
     <designationCategory>VCHE_PipeNetworks</designationCategory>
     <tickerType>Rare</tickerType>
+    <uiIconPath>ConnectedBed/ConnectedBed_Icon</uiIconPath>
     <uiOrder>2020</uiOrder>
   </ThingDef>
 </Defs>

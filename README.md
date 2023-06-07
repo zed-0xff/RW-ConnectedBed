@@ -1,7 +1,18 @@
 # Connected Bed
 [![Connected Bed](About/Preview.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2957904090)
 
-Adds new hospital bed with 4 cool features:
+## New! Bed Connector
+
+You can build it over ANY other bed and get all the features of Connected Bed!
+Extra cool feature: Gene Extractors, Core scanners, and any other enterable buildings are also supported!
+
+![](screens/biotech.jpg)
+
+So now your pawns won't starve or pee their pants while you pull their brains and genes out!
+
+## Connected Bed
+
+A new hospital bed with 4 cool features:
 
 1. Integrated nutrient paste dripper (requires [VNPE](https://steamcommunity.com/sharedfiles/filedetails/?id=2920385763))
 2. Automatic blood draining from prisoners (requires [VRE-S](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383))
