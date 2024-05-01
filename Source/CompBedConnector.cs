@@ -157,7 +157,7 @@ public class CompBedConnector : ThingComp {
         {
             var pawn = occupants[o];
             if( !pawn.IsPrisonerOfColony ) continue;
-            if( pawn.guest.interactionMode != PrisonerInteractionModeDefOf.HemogenFarm ) continue;
+			if( !pawn.guest.IsInteractionEnabled (PrisonerInteractionModeDefOf.HemogenFarm) ) continue;
             if( !RecipeDefOf.ExtractHemogenPack.Worker.AvailableOnNow(pawn) ) continue;
             if( pawn.health.hediffSet.HasHediff(HediffDefOf.BloodLoss) ) continue;
 
