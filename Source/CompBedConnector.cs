@@ -44,7 +44,11 @@ public class CompBedConnector : ThingComp {
         }
     }
 
+#if RW16
+    public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish){
+#else
     public override void PostDeSpawn(Map map){
+#endif
         dbh = null;
         powerComp = null;
         pasteComp = null;
@@ -157,7 +161,11 @@ public class CompBedConnector : ThingComp {
         {
             var pawn = occupants[o];
             if( !pawn.IsPrisonerOfColony ) continue;
+#if RW15
+            if( !pawn.guest.IsInteractionEnabled(PrisonerInteractionModeDefOf.HemogenFarm) ) continue;
+#else
             if( pawn.guest.interactionMode != PrisonerInteractionModeDefOf.HemogenFarm ) continue;
+#endif
             if( !RecipeDefOf.ExtractHemogenPack.Worker.AvailableOnNow(pawn) ) continue;
             if( pawn.health.hediffSet.HasHediff(HediffDefOf.BloodLoss) ) continue;
 
@@ -175,7 +183,9 @@ public class CompBedConnector : ThingComp {
                 Hediff hediff = HediffMaker.MakeHediff(HediffDefOf.BloodLoss, pawn);
                 hediff.Severity = 0.59f; // 0.6 pops up unwanted health alert
                 pawn.health.AddHediff(hediff);
+#pragma warning disable CS0612
                 net.DistributeAmongStorage(1);
+#pragma warning restore CS0612
                 if (IsViolationOnPawn(pawn, Faction.OfPlayer))
                 {
                     ReportViolation(pawn, pawn.HomeFaction, -1, HistoryEventDefOf.ExtractedHemogenPack);
