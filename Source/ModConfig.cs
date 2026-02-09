@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
+using RimWorld;
 using Verse;
 using UnityEngine;
 
@@ -68,10 +69,21 @@ public class ModConfig : Mod
         }
     }
 
+    private static string FindPluginPath(string rootDir, string dllName){
+        string loc = Assembly.GetExecutingAssembly().Location;
+        if (!string.IsNullOrEmpty(loc)) {
+            string dir = Path.GetDirectoryName(loc);
+            if (!string.IsNullOrEmpty(dir))
+                return Path.Combine(dir, "..", "Plugins", dllName);
+        }
+        // fallback: Assembly.Location can be empty on some Mono setups
+        string ver = VersionControl.CurrentMajor + "." + VersionControl.CurrentMinor;
+        return Path.Combine(rootDir, ver, "Plugins", dllName);
+    }
+
     private void LoadPlugin(ModContentPack content, string name){
         try {
-            string assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string fname = Path.Combine(assemblyDir, "..", "Plugins", "CB_" + name + ".dll");
+            string fname = FindPluginPath(content.RootDir, "CB_" + name + ".dll");
             byte[] rawAssembly = File.ReadAllBytes(fname);
             Assembly assembly = AppDomain.CurrentDomain.Load(rawAssembly);
             Log.Message("[d] ConnectedBed loaded plugin " + assembly);
